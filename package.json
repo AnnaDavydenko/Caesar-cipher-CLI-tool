@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "encode-file-input": "node index.js --action encode --shift -1 --input input.txt --output output.txt",
+    "encode-file-input": "node index.js --action encode --shift 5 --input input.txt --output output.txt",
     "decode-file-input": "node index.js --action decode --shift 5 --input output.txt --output input.txt",
     "encode-file-input-short": "node index.js -a encode -s 5 --input input.txt -o output.txt",
     "decode-file-input-short": "node index.js -a decode -s 5 --input output.txt -o input.txt",
