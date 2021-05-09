@@ -1,0 +1,23 @@
+{
+  "name": "Caesar-cipher-CLI-tool",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "encode-file-input": "node index.js --action encode --shift 5 --input input.txt --output output.txt",
+    "decode-file-input": "node index.js --action decode --shift 5 --input output.txt --output input.txt",
+    "encode-file-input-short": "node index.js -a encode -s 5 --input input.txt -o output.txt",
+    "decode-file-input-short": "node index.js -a decode -s 5 --input output.txt -o input.txt",
+    "encode-cmd-input": "node index.js --action encode --shift 5",
+    "decode-cmd-input": "node index.js --action decode --shift 5",
+    "encode-cmd-input-short": "node index.js -a encode -s 5",
+    "decode-cmd-input-short": "node index.js -a decode -s 5"
+  },
+  "keywords": [],
+  "author": "Anna Davydenko",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "commander": "^7.2.0",
+    "inquirer": "^8.0.0"
+  }
+}
