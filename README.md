@@ -32,3 +32,5 @@ $ node index.js --action decode --shift 5"
 $ node index.js -a encode -s 5"
 
 $ node index.js -a decode -s 5"
+
+$ node index.js --action encode --shift -1 --input input.txt --output output.txt

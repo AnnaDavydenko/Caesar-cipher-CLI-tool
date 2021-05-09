@@ -27,18 +27,22 @@
 // };
 
 const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+const ALPHABET_LENGTH  = ALPHABET.length;
 
 const encrypt = (key, str) =>  process(key, str, true);
 
 const decrypt = (key, str) => process(key, str, false);
 
 const process = (key, str, straight) => {
+    if (key > ALPHABET_LENGTH) {
+        key = key - ALPHABET_LENGTH * Math.floor(key / ALPHABET_LENGTH)
+    }
     const upperCaseStr = ALPHABET;
     const lowerCaseStr = upperCaseStr.toLowerCase();
     const oldLetterOrder = `${upperCaseStr}${lowerCaseStr}`;
     const indexFirstEl = key < 0
-        ? (26 - key - 26)
-        : 26 - key;
+        ? (ALPHABET_LENGTH - key - ALPHABET_LENGTH)
+        : ALPHABET_LENGTH - key;
 
     const newLetterOrder = reorderLettersInStr(upperCaseStr, lowerCaseStr, indexFirstEl);
     const index = (x) => (straight ? newLetterOrder : oldLetterOrder).indexOf(x);

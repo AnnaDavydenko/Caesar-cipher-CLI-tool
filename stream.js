@@ -29,7 +29,7 @@ function transformStream(shift, action) {
 
 function writeStream(output) {
     if (fs.existsSync(output)) {
-        return fs.createWriteStream(output, { flags: 'w+' });
+        return fs.createWriteStream(output, { flags: 'a' });
     } else if (output === undefined) {
         return process.stdout;
     }
